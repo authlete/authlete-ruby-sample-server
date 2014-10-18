@@ -793,7 +793,7 @@ get '/authorization_ui' do
   erb :authorization_ui, :locals => {
     :res => {
       "client" => {
-        "clientName" => "Client Getting Started"
+        "clientName" => "Example Client"
       },
       "scopes" => [
         { "name" => "fortune" },
@@ -812,7 +812,7 @@ __END__
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Service Getting Started</title>
+    <title>Example Service</title>
     <style type="text/css">
       .font {
         font-family: 'Source Sans Pro', 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
@@ -862,7 +862,7 @@ __END__
     </style>
   </head>
   <body class="font">
-    <div class="page_title">Service Getting Started</div>
+    <div class="page_title">Example Service</div>
     <div class="content">
       <h2>Authorization Request</h2>
       <div class="indent">
