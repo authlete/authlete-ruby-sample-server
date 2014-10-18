@@ -1,0 +1,10 @@
+{
+  "developer": "developer",
+  "clientType": "PUBLIC",
+  "redirectUris": [
+    "http://localhost:4567/callback"
+  ],
+  "responseTypes": [ "CODE" ],
+  "grantTypes": [ "AUTHORIZATION_CODE", "REFRESH_TOKEN" ],
+  "clientName": "Example Client"
+}

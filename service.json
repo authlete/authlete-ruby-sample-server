@@ -1,0 +1,15 @@
+{
+  "serviceName": "Example Service",
+  "issuer": "https://example.com",
+  "authorizationEndpoint": "https://example.com/api/authorization",
+  "tokenEndpoint": "https://example.com/api/token",
+  "supportedScopes": [
+    { "name": "fortune" },
+    { "name": "saying" }
+  ],
+  "supportedResponseTypes": [ "CODE" ],
+  "supportedGrantTypes": [ "AUTHORIZATION_CODE", "REFRESH_TOKEN" ],
+  "accessTokenType": "Bearer",
+  "accessTokenDuration": 3600,
+  "refreshTokenDuration": 864000
+}
