@@ -23,7 +23,9 @@ Apache License, Version 2.0
 Source Download
 ---------------
 
-    git clone https://github.com/authlete/authlete-ruby-sample-server.git
+```
+git clone https://github.com/authlete/authlete-ruby-sample-server.git
+```
 
 
 Set Up
@@ -62,20 +64,20 @@ Endpoints
 `server.rb` implements the following endpoints.
 
 * The top page
-  [http://localhost:4567/](http://localhost:4567/)
+  - [http://localhost:4567/](http://localhost:4567/)
 
 * The authorization endpoint
-  [http://localhost:4567/authorization](http://localhost:4567/authorization)
+  - [http://localhost:4567/authorization](http://localhost:4567/authorization)
 
 * The token endpoint
-  [http://localhost:4567/token](http://localhost:4567/token)
+  - [http://localhost:4567/token](http://localhost:4567/token)
 
 * The protected resource endpoints
-  [http://localhost:4567/fortune](http://localhost:4567/fortune)
-  [http://localhost:4567/saying](http://localhost:4567/saying)
+  - [http://localhost:4567/fortune](http://localhost:4567/fortune)
+  - [http://localhost:4567/saying](http://localhost:4567/saying)
 
 * The redirection endpoint (for client)
-  [http://localhost:4567/callback](http://localhost:4567/callback)
+  - [http://localhost:4567/callback](http://localhost:4567/callback)
 
 Note that it is not an OAuth 2.0 server that should implement a redirection
 endpoint. Instead, it is the developer of the client application who has to
@@ -107,9 +109,8 @@ Test Steps
 
 6. Access a protected resource endpoint with the access token issued at
    the step above. For example,
-
-   http://localhost:4567/fortune?access_token=${ACCESS_TOKEN}
-   http://localhost:4567/saying?access_token=${ACCESS_TOKEN}
+   - http://localhost:4567/fortune?access_token=${ACCESS_TOKEN}
+   - http://localhost:4567/saying?access_token=${ACCESS_TOKEN}
 
    
 Note
@@ -120,8 +121,8 @@ Especially:
 
 * The endpoints are not protected by TLS.
 
-* The authorization endpoint does not support POST (OpenID Connect
-  requires it).
+* The authorization endpoint does not support HTTP POST method
+  (OpenID Connect requires it).
 
 * The authorization endpoint does not authenticate the end-user.
   End-user authentication always succeeds as if `joe` logged in the
@@ -134,7 +135,7 @@ Especially:
 
 * 'Claims' and 'ACR' are not set in the request for
   `/auth/authorization/issue` API. They are needed when the authorization
-  endpoint supports any f `response_type`s which issue an ID token.
+  endpoint supports any of `response_type`s which issue an ID token.
 
 * The token endpoint does not support "Resource Owner Password Credentials",
   so it always fails when the token request contains `grant_type=password`.
