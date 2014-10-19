@@ -455,14 +455,14 @@ def do_authorization_issue(ticket, subject, authTime)
   when "LOCATION"
     # 302 Found
     #   Triggering redirection with either (1) an authorization
-    #   code, an ID token and/or an access token (on succcess)
+    #   code, an ID token and/or an access token (on success)
     #   or (2) an error code (on failure).
     return WebResponse.new(302).location(content).to_response
 
   when "FORM"
     # 200 OK
     #   Triggering redirection with either (1) an authorization
-    #   code, an ID token and/or an access token (on succcess)
+    #   code, an ID token and/or an access token (on success)
     #   or (2) an error code (on failure).
     return WebResponse.new(200, content).html.to_response
 
