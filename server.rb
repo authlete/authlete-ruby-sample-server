@@ -560,7 +560,7 @@ end
 # is raised.
 #--------------------------------------------------
 def do_introspection(token, scopes, subject)
-  # Call Authlet's /auth/introspection API.
+  # Call Authlete's /auth/introspection API.
   response = call_introspection_api(token, scopes, subject)
 
   # The content of the response to the client.
