@@ -117,7 +117,6 @@
 require 'sinatra'
 require 'rest_client'
 require 'json'
-require 'base64'
 
 
 #--------------------------------------------------
@@ -607,8 +606,8 @@ end
 def extract_access_token(request)
   header = request.env["HTTP_AUTHORIZATION"]
 
-  if header != nil && /^Bearer[ ]+(.+)/i =~ header
-    return Base64.decode64($1)
+  if /^Bearer[ ]+(.+)/i =~ header
+    return $1
   end
 
   return request["access_token"]
